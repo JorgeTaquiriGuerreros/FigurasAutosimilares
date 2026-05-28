@@ -5,14 +5,13 @@ void fractalTree(Turtle *turtle, float length, int depth) {
     return;
   
   turtleForward(turtle, length);
-
-  turtleLeft(turtle, 30);
+  turtleLeft(turtle, 20);
   fractalTree(turtle, length * 0.7, depth - 1);
-
-  turtleRight(turtle, 60);
+  
+  turtleRight(turtle, 40);
   fractalTree(turtle, length * 0.7, depth - 1);
-
-  turtleLeft(turtle, 30);
+  
+  turtleLeft(turtle, 20);
   turtleBackward(turtle, length);
 }
 
@@ -38,4 +37,3 @@ int main(void) {
 
   return 0;
 }
-
