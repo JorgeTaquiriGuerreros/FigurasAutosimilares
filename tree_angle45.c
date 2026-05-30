@@ -16,7 +16,7 @@ void fractalTree(Turtle *turtle, float length, int depth) {
 }
 
 int main(void) {
-  TurtleApp *app = turtleAppCreate(600, 600, "Fractal Tree");
+  TurtleApp *app = turtleAppCreate(1000, 800, "Fractal Tree");
 
   if (app == NULL)
     return 1;
@@ -24,13 +24,14 @@ int main(void) {
   Turtle *t = turtleAppGetTurtle(app);
 
   turtlePenUp(t);
-  turtleGoTo(t, 300.0f, 500.0f);
+  turtleGoTo(t, 500.0f, 750.0f);
+  turtleLeft(t, 90);
   turtlePenDown(t);
 
   turtleSetColor(t, 120, 70, 20);
-  turtleSetSpeed(t, 5.0f);
-  
-  fractalTree(t, 100.0f, 7);
+  turtleSetSpeed(t, 7.0f);
+
+  fractalTree(t, 120.0f, 8);
 
   turtleAppRun(app);
   turtleAppDestroy(app);
